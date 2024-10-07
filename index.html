@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Track My Income</title>
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="setup-container">
+            <h1 id="setup-title">Let's get started...</h1>
+            <form id="setup-form">
+                <div class="setup-input-group">
+                    <p class="setup-input-caption">Monthly Income</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">£</span>
+                        </div>
+                        <input type="number" id="monthlyIncome" class="form-control" step="0.01" required
+                            class="form-control" placeholder="0.00" aria-label="Amount (to the nearest pound)">
+                    </div>
+                </div>
+
+                <div id="setup-times-row">
+                    <div class="setup-input-group">
+                        <p class="setup-input-caption">Start Time</p>
+                        <div class="input-group mb-3">
+                            <input type="time" id="startTime" class="form-control" required class="form-control">
+                        </div>
+                    </div>
+                    <div class="setup-input-group">
+                        <p class="setup-input-caption">Finish Time</p>
+                        <div class="input-group mb-3">
+                            <input type="time" id="finishTime" class="form-control" required class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setup-input-group">
+                    <p class="setup-input-caption">How many days a week?</p>
+                    <div class="input-group mb-3">
+                        <input type="number" id="daysWorked" class="form-control" step="0.1" required
+                            class="form-control" placeholder="e.g. 5">
+                        <div class="input-group-append">
+                            <span class="input-group-text">a week</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="calculate-button" type="submit" class="btn w-100">Calculate</button>
+            </form>
+        </div>
+
+        <div id="earnings-container">
+            <div id="key-earnings">
+                <h1 id="earnings-value">£106.43</h1>
+                <h2 id="earnings-subtitle">Earned</h2>
+                <h3 id="time-elapsed">1:30:42</h3>
+            </div>
+        </div>
+        
+    </div>
+    <div id="earnings-buttons">
+        <button id="pause-button">Pause</button>
+        <button id="reset-button">End</button>
+    </div>
+
+
+
+    <p id="privacy-note">Privacy Notice: We never store or access your information.
+        All data is kept on your device. </p>
+
+    <script src="script.js"></script>
+</body>
